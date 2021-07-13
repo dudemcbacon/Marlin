@@ -136,21 +136,21 @@
 #define Z_DIR_PIN                             48
 #define Z_ENABLE_PIN                          62
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                            40
+  #define Z_CS_PIN                   EXP1_03_PIN
 #endif
 
 #define E0_STEP_PIN                           26
 #define E0_DIR_PIN                            28
 #define E0_ENABLE_PIN                         24
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                           42
+  #define E0_CS_PIN                  EXP2_08_PIN
 #endif
 
 #define E1_STEP_PIN                           36
 #define E1_DIR_PIN                            34
 #define E1_ENABLE_PIN                         30
 #ifndef E1_CS_PIN
-  #define E1_CS_PIN                           44
+  #define E1_CS_PIN                  EXP2_10_PIN
 #endif
 
 //
@@ -507,7 +507,7 @@
     #if ENABLED(CR10_STOCKDISPLAY)
 
       #define LCD_PINS_RS            EXP1_04_PIN
-      #define LCD_PINS_ENABLE        EXP1_03_PIN
+      //#define LCD_PINS_ENABLE        EXP1_03_PIN
       #define LCD_PINS_D4            EXP1_05_PIN
 
       #if !IS_NEWPANEL
@@ -516,7 +516,7 @@
 
     #elif ENABLED(ZONESTAR_LCD)
 
-      #error "CAUTION! ZONESTAR_LCD on RAMPS requires wiring modifications. It plugs into AUX2 but GND and 5V need to be swapped. Comment out this line to continue."
+      // #error "CAUTION! ZONESTAR_LCD on RAMPS requires wiring modifications. It plugs into AUX2 but GND and 5V need to be swapped. Comment out this line to continue."
       #define LCD_PINS_RS                     64
       #define LCD_PINS_ENABLE                 44
       #define LCD_PINS_D4                     63
@@ -542,7 +542,7 @@
         #define LCD_PINS_D6          EXP1_04_PIN
       #endif
 
-      #define LCD_PINS_D7            EXP1_03_PIN
+      //#define LCD_PINS_D7            EXP1_03_PIN
 
       #if !IS_NEWPANEL
         #define BEEPER_PIN           EXP2_06_PIN
@@ -637,7 +637,7 @@
 
     #elif ENABLED(ELB_FULL_GRAPHIC_CONTROLLER)
 
-      #define DOGLCD_CS              EXP1_03_PIN
+      //#define DOGLCD_CS              EXP1_03_PIN
       #define DOGLCD_A0              EXP1_04_PIN
 
       #define BEEPER_PIN             EXP1_06_PIN
@@ -695,7 +695,7 @@
             #define RGB_LED_G_PIN    EXP1_04_PIN
           #endif
           #ifndef RGB_LED_B_PIN
-            #define RGB_LED_B_PIN    EXP1_03_PIN
+            //#define RGB_LED_B_PIN    EXP1_03_PIN
           #endif
         #elif ENABLED(FYSETC_MINI_12864_2_1)
           #define NEOPIXEL_PIN       EXP1_05_PIN

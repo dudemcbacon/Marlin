@@ -42,12 +42,17 @@
 // See https://www.thingiverse.com/asset:66604
 //
 
-#ifndef X_CS_PIN
-  #define X_CS_PIN 59
-#endif
+// Brandon note: you can undo these comments if you move to a different LCD.
+// AUX-2 is required for the Anet A8 LCD and these pins fall on AUX-2.
+// Commenting them out defaults to what is in pins_RAMPS.h which has all the
+// CS_PINs in the EXP headers.
 
-#ifndef Y_CS_PIN
-  #define Y_CS_PIN 63
-#endif
+//#ifndef X_CS_PIN
+//  #define X_CS_PIN 59
+//#endif
+
+//#ifndef Y_CS_PIN
+//  #define Y_CS_PIN 63
+//#endif
 
 #include "pins_RAMPS.h"
